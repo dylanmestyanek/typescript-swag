@@ -58,3 +58,13 @@ class House {
     console.log("I am a house");
   }
 }
+
+interface Printable {
+  print(): void;
+}
+
+function printStuff<T extends Printable>(arr: T[]) {
+  for (var i = 0; i < arr.length; i++) {
+    arr[i].print();
+  }
+}
